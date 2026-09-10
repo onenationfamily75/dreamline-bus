@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dreamline Booking | Bus Tickets Nairobi, Mombasa, Kisumu &amp; Kampala</title>
+<meta name="description" content="Book Dreamline bus seats online across Kenya and to Kampala. Compare 40+ routes, choose Standard or VIP, and confirm your seat on WhatsApp in minutes.">
+<link rel="canonical" href="https://dreamlinebooking.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0E3B2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dreamline Booking">
+<meta property="og:url" content="https://dreamlinebooking.com/">
+<meta property="og:title" content="Dreamline Booking | Bus Tickets Across Kenya &amp; to Kampala">
+<meta property="og:description" content="Search a route, pick Standard or VIP, and confirm your seat on WhatsApp. Coast, Central, Rift Valley, Western and cross-border departures daily.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dreamline Booking | Bus Tickets Across Kenya &amp; to Kampala">
+<meta name="twitter:description" content="Search a route, pick Standard or VIP, and confirm your seat on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://dreamlinebooking.com/#org",
+      "name": "Dreamline Booking",
+      "url": "https://dreamlinebooking.com/",
+      "email": "dreamline.exp@gmail.com",
+      "telephone": "+254103761442",
+      "address": [
+        {"@type": "PostalAddress", "streetAddress": "Duruma Road", "addressLocality": "Nairobi", "addressCountry": "KE"},
+        {"@type": "PostalAddress", "streetAddress": "Jomo Kenyatta Avenue", "addressLocality": "Mombasa", "addressCountry": "KE"}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dreamlinebooking.com/#website",
+      "url": "https://dreamlinebooking.com/",
+      "name": "Dreamline Booking",
+      "publisher": {"@id": "https://dreamlinebooking.com/#org"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "How do I book a Dreamline bus seat?", "acceptedAnswer": {"@type": "Answer", "text": "Search your route on dreamlinebooking.com, open the booking form, choose your date, class and seats, then send the request to the booking desk on WhatsApp for confirmation."}},
+        {"@type": "Question", "name": "How do I pay for my ticket?", "acceptedAnswer": {"@type": "Answer", "text": "Payment is made only through a system-generated M-Pesa prompt after the desk confirms your seat. Never send money to a personal number."}},
+        {"@type": "Question", "name": "Which routes cross the border?", "acceptedAnswer": {"@type": "Answer", "text": "Dreamline runs cross-border coaches between Nairobi, Kisumu, Mombasa and Kampala in Uganda, handled by the Western desk."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --forest:#0E3B2E;
+    --forest-deep:#08261D;
+    --clay:#D8542F;
+    --clay-soft:#EE7B54;
+    --sun:#F0B429;
+    --stone:#F5F2EC;
+    --line:#DAD4C8;
+    --ink:#17201C;
+    --mute:#5C6660;
+    --rail: 250px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:#fff;color:var(--ink);font-family:'Source Sans 3',system-ui,sans-serif;font-size:16.5px;line-height:1.62;}
+  h1,h2,h3,h4{font-family:'Bricolage Grotesque','Source Sans 3',sans-serif;margin:0;color:var(--forest);line-height:1.15;font-weight:700;}
+  a{color:inherit;}
+  button,input,select,textarea{font-family:inherit;font-size:1rem;}
+
+  /* ---------- Layout: fixed left rail + content column ---------- */
+  .rail{position:fixed;inset:0 auto 0 0;width:var(--rail);background:var(--forest);color:#EAF1ED;display:flex;flex-direction:column;justify-content:space-between;padding:26px 22px;z-index:60;}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.15rem;color:#fff;text-decoration:none;letter-spacing:-0.02em;}
+  .logo i{width:26px;height:26px;border-radius:8px 8px 3px 3px;background:linear-gradient(160deg,var(--sun),var(--clay));display:block;}
+  .rail nav{margin-top:38px;display:flex;flex-direction:column;gap:2px;}
+  .rail nav a{text-decoration:none;font-size:0.93rem;padding:9px 12px;border-radius:8px;color:rgba(234,241,237,.72);display:flex;justify-content:space-between;align-items:center;}
+  .rail nav a:hover,.rail nav a.on{background:rgba(255,255,255,.09);color:#fff;}
+  .rail nav a span{font-size:.72rem;opacity:.5;}
+  .rail-foot{font-size:.78rem;color:rgba(234,241,237,.6);}
+  .rail-foot strong{display:block;color:#fff;font-size:.92rem;font-weight:600;}
+
+  .shell{margin-left:var(--rail);}
+  .pad{padding:0 clamp(20px,5vw,72px);}
+  section{padding:74px 0;}
+
+  /* ---------- Topbar ---------- */
+  .topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.93);backdrop-filter:blur(9px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(20px,5vw,72px);}
+  .topbar .tick{font-size:.82rem;color:var(--mute);}
+  .topbar .tick b{color:var(--forest);}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 20px;font-weight:700;font-size:.9rem;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:.16s ease;}
+  .btn-clay{background:var(--clay);color:#fff;}
+  .btn-clay:hover{background:var(--clay-soft);}
+  .btn-line{background:#fff;color:var(--forest);border-color:var(--line);}
+  .btn-line:hover{border-color:var(--forest);}
+  .btn-dark{background:var(--forest);color:#fff;}
+  .btn-dark:hover{background:var(--forest-deep);}
+  .btn-sm{padding:8px 15px;font-size:.83rem;}
+  .btn-block{width:100%;justify-content:center;}
+
+  /* ---------- Hero: split, no photos ---------- */
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:start;padding-top:64px;}
+  .kicker{display:inline-block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--clay);margin-bottom:16px;}
+  .hero h1{font-size:clamp(2.3rem,4.4vw,3.5rem);letter-spacing:-0.03em;}
+  .hero h1 em{font-style:normal;color:var(--clay);}
+  .hero p.lede{font-size:1.08rem;color:var(--mute);max-width:46ch;margin:18px 0 26px;}
+  .facts{display:flex;flex-wrap:wrap;gap:10px;}
+  .fact{background:var(--stone);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:.84rem;font-weight:600;color:var(--forest);}
+
+  .finder{background:var(--forest);border-radius:18px;padding:26px;color:#EAF1ED;box-shadow:0 24px 50px -28px rgba(14,59,46,.7);}
+  .finder h2{color:#fff;font-size:1.2rem;}
+  .finder p.sub{font-size:.85rem;color:rgba(234,241,237,.7);margin:6px 0 18px;}
+  .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .fld{display:flex;flex-direction:column;gap:6px;}
+  .fld label{font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;font-weight:700;color:rgba(234,241,237,.65);}
+  .fld select,.fld input{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.18);color:#fff;border-radius:9px;padding:11px 12px;}
+  .fld select option{color:#17201C;}
+  .full{grid-column:1/-1;}
+  .fnote{font-size:.78rem;color:rgba(234,241,237,.6);margin-top:12px;}
+  .fmsg{display:none;margin-top:12px;background:rgba(240,180,41,.16);border:1px solid rgba(240,180,41,.4);color:#FBE8BC;border-radius:9px;padding:10px 12px;font-size:.85rem;}
+  .fmsg.show{display:block;}
+
+  /* ---------- Route directory: table, not cards ---------- */
+  .band-stone{background:var(--stone);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .head{max-width:62ch;margin-bottom:30px;}
+  .head h2{font-size:clamp(1.7rem,2.8vw,2.3rem);letter-spacing:-0.02em;}
+  .head p{color:var(--mute);margin:12px 0 0;}
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+  .tab{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font-size:.86rem;font-weight:700;color:var(--mute);cursor:pointer;}
+  .tab.on{background:var(--forest);color:#fff;border-color:var(--forest);}
+  .table{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+  .trow{display:grid;grid-template-columns:1.4fr 1fr .8fr auto;gap:16px;align-items:center;padding:15px 20px;border-bottom:1px solid var(--line);}
+  .trow:last-child{border-bottom:none;}
+  .trow.hd{background:#FBFAF7;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--mute);}
+  .trow.hit{background:#FFF6E8;}
+  .tpath{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;color:var(--forest);font-size:1.02rem;}
+  .tpath s{text-decoration:none;color:var(--clay);margin:0 7px;}
+  .tmeta{font-size:.85rem;color:var(--mute);}
+  .pill{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:700;border-radius:999px;padding:4px 11px;border:1px solid var(--line);}
+  .pill.a{color:#0E3B2E;background:#E4EFE9;border-color:#C7DFD4;}
+  .pill.b{color:#8A3A16;background:#FBEADF;border-color:#F1CDB6;}
+  .empty{display:none;padding:22px;text-align:center;color:var(--mute);font-size:.9rem;}
+
+  /* ---------- Numbered promise strip ---------- */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+  .step{border-top:3px solid var(--forest);padding-top:16px;}
+  .step .n{font-family:'Bricolage Grotesque',sans-serif;font-size:2rem;color:var(--clay);font-weight:700;line-height:1;}
+  .step h3{font-size:1.05rem;margin:8px 0 6px;}
+  .step p{margin:0;color:var(--mute);font-size:.94rem;}
+
+  /* ---------- Comfort list ---------- */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+  .clist{list-style:none;margin:0;padding:0;}
+  .clist li{display:flex;gap:14px;padding:15px 0;border-bottom:1px dashed var(--line);}
+  .clist li:last-child{border-bottom:none;}
+  .clist b{display:block;color:var(--forest);font-family:'Bricolage Grotesque',sans-serif;}
+  .clist span{color:var(--mute);font-size:.94rem;}
+  .clist .dotn{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--stone);border:1px solid var(--line);display:grid;place-items:center;font-size:.78rem;font-weight:700;color:var(--forest);}
+
+  /* ---------- Desks ---------- */
+  .desks{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .desk{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;}
+  .desk h3{font-size:1.05rem;}
+  .desk .num{font-family:'Bricolage Grotesque',sans-serif;font-size:1.4rem;color:var(--clay);margin:10px 0 6px;}
+  .desk p{color:var(--mute);font-size:.9rem;margin:0 0 16px;}
+
+  /* ---------- FAQ ---------- */
+  .faq details{border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px;background:#fff;}
+  .faq summary{cursor:pointer;font-weight:700;color:var(--forest);font-family:'Bricolage Grotesque',sans-serif;}
+  .faq p{color:var(--mute);margin:10px 0 0;font-size:.95rem;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--forest-deep);color:rgba(234,241,237,.72);padding:56px 0 24px;}
+  footer h4{color:#fff;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;}
+  .fgrid4{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;}
+  footer ul{list-style:none;margin:0;padding:0;font-size:.9rem;}
+  footer li{margin-bottom:7px;}
+  footer a{text-decoration:none;}
+  footer a:hover{color:#fff;}
+  .fbot{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:18px;font-size:.8rem;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+
+  /* ---------- Booking drawer (side sheet, not centre modal) ---------- */
+  .scrim{position:fixed;inset:0;background:rgba(8,38,29,.55);display:none;z-index:100;}
+  .scrim.show{display:block;}
+  .sheet{position:fixed;top:0;right:0;bottom:0;width:min(430px,100%);background:#fff;z-index:110;transform:translateX(100%);transition:transform .25s ease;overflow-y:auto;padding:28px 26px 34px;}
+  .sheet.show{transform:none;}
+  .sheet h3{font-size:1.3rem;}
+  .sheet .route{color:var(--clay);font-weight:700;font-size:.95rem;margin:4px 0 20px;}
+  .sfld{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
+  .sfld label{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--mute);}
+  .sfld input,.sfld select,.sfld textarea{border:1px solid var(--line);border-radius:9px;padding:10px 12px;}
+  .srow{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .close{position:absolute;top:16px;right:18px;background:none;border:none;font-size:1.5rem;color:var(--mute);cursor:pointer;line-height:1;}
+  .notice{background:var(--stone);border-left:3px solid var(--sun);border-radius:0 8px 8px 0;padding:12px 14px;font-size:.83rem;color:var(--mute);margin:16px 0;}
+  .err{color:#B3261E;font-size:.83rem;display:none;margin-bottom:10px;}
+  .err.show{display:block;}
+
+  @media (max-width:1080px){
+    .hero{grid-template-columns:1fr;gap:36px;}
+    .split,.desks{grid-template-columns:1fr;gap:28px;}
+  }
+  @media (max-width:860px){
+    :root{--rail:0px;}
+    .rail{position:static;width:auto;flex-direction:row;align-items:center;padding:14px 20px;}
+    .rail nav{display:none;}
+    .rail-foot{display:none;}
+    .shell{margin-left:0;}
+    .steps{grid-template-columns:1fr;gap:20px;}
+    .fgrid4{grid-template-columns:1fr 1fr;}
+    .trow{grid-template-columns:1fr;gap:8px;}
+    .trow.hd{display:none;}
+    .srow{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body id="top">
+
+<aside class="rail">
+  <div>
+    <a class="logo" href="#top"><i></i>Dreamline Booking</a>
+    <nav>
+      <a href="#find" class="on">Find a seat <span>01</span></a>
+      <a href="#routes">Route directory <span>02</span></a>
+      <a href="#how">How booking works <span>03</span></a>
+      <a href="#comfort">Onboard <span>04</span></a>
+      <a href="#desks">Booking desks <span>05</span></a>
+      <a href="#faq">Questions <span>06</span></a>
+    </nav>
+  </div>
+  <div class="rail-foot">
+    <strong>0103 761 442</strong>
+    Coast &amp; Central desk
+    <strong style="margin-top:10px">0108 504 492</strong>
+    Western &amp; Cross-border desk
+  </div>
+</aside>
+
+<div class="shell">
+
+  <div class="topbar">
+    <p class="tick">Daily departures &middot; <b>40+ routes</b> across Kenya and into Uganda</p>
+    <a class="btn btn-clay btn-sm" href="#find">Book a seat</a>
+  </div>
+
+  <main>
+  <!-- HERO -->
+  <section class="pad hero" id="find">
+    <div>
+      <span class="kicker">Kenya &amp; Uganda coach booking</span>
+      <h1>Pick the town.<br>We'll hold the <em>seat</em>.</h1>
+      <p class="lede">Dreamline Booking is the online seat desk for Dreamline coaches — coast, central, Rift Valley, western Kenya and cross-border runs to Kampala. Choose a route, send your details, and a desk agent confirms on WhatsApp.</p>
+      <div class="facts">
+        <span class="fact">31 towns served</span>
+        <span class="fact">Standard &amp; VIP classes</span>
+        <span class="fact">Overnight &amp; daytime runs</span>
+        <span class="fact">M-Pesa prompt payment</span>
+      </div>
+    </div>
+
+    <div class="finder">
+      <h2>Search a departure</h2>
+      <p class="sub">Pick your towns and date — we'll open the booking form for that exact route.</p>
+      <div class="fgrid">
+        <div class="fld">
+          <label for="fFrom">Leaving from</label>
+          <select id="fFrom"></select>
+        </div>
+        <div class="fld">
+          <label for="fTo">Going to</label>
+          <select id="fTo"></select>
+        </div>
+        <div class="fld">
+          <label for="fDate">Travel date</label>
+          <input type="date" id="fDate">
+        </div>
+        <div class="fld">
+          <label for="fClass">Class</label>
+          <select id="fClass"><option>Standard</option><option>VIP</option></select>
+        </div>
+        <div class="fld full">
+          <button class="btn btn-clay btn-block" id="fGo" type="button">Show this route</button>
+        </div>
+      </div>
+      <p class="fnote">No account, no card details. Seats are held once the desk replies.</p>
+      <div class="fmsg" id="fMsg"></div>
+    </div>
+  </section>
+
+  <!-- ROUTE DIRECTORY -->
+  <section class="band-stone" id="routes">
+    <div class="pad">
+      <div class="head">
+        <h2>Route directory</h2>
+        <p>Every corridor Dreamline runs, listed as a timetable rather than a gallery. Filter by region, then open the booking form on the row you need.</p>
+      </div>
+      <div class="tabs" id="tabs">
+        <button class="tab on" data-region="all" type="button">All routes</button>
+        <button class="tab" data-region="coastal" type="button">Coast</button>
+        <button class="tab" data-region="central" type="button">Nairobi &amp; Central</button>
+        <button class="tab" data-region="western" type="button">Rift Valley &amp; Western</button>
+        <button class="tab" data-region="international" type="button">Cross-border</button>
+      </div>
+      <div class="table">
+        <div class="trow hd"><div>Route</div><div>Service</div><div>Desk</div><div></div></div>
+        <div id="rows"></div>
+        <div class="empty" id="empty">No route matches that pair yet — message a desk and we'll advise the nearest connection.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="pad" id="how">
+    <div class="head">
+      <h2>Three steps from search to seat</h2>
+      <p>Bookings are split between two desks by corridor, so the person replying to you already knows the road.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">01</div>
+        <h3>Search your corridor</h3>
+        <p>Choose the towns and the date. The directory highlights the matching row and names the desk that handles it.</p>
+      </div>
+      <div class="step">
+        <div class="n">02</div>
+        <h3>Send your details</h3>
+        <p>Name, phone, passengers, class and any luggage notes. Everything travels with the request, so nothing gets asked twice.</p>
+      </div>
+      <div class="step">
+        <div class="n">03</div>
+        <h3>Confirm and pay</h3>
+        <p>The desk replies on WhatsApp with the departure time and seat numbers. Pay only via the system-generated M-Pesa prompt.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMFORT -->
+  <section class="band-stone" id="comfort">
+    <div class="pad split">
+      <div>
+        <div class="head" style="margin-bottom:16px">
+          <h2>What the long night ride actually gives you</h2>
+          <p>Most of our corridors are six to twelve hours. The coaches are fitted for that, not for a short hop.</p>
+        </div>
+        <a class="btn btn-dark" href="#routes">Browse the directory</a>
+      </div>
+      <ul class="clist">
+        <li><span class="dotn">01</span><span><b>Reclining VIP rows</b><span>Extra legroom and deeper recline on the coast, western and Kampala runs.</span></span></li>
+        <li><span class="dotn">02</span><span><b>Charging and Wi-Fi</b><span>Sockets at seat level so a phone survives an overnight leg.</span></span></li>
+        <li><span class="dotn">03</span><span><b>Onboard washroom</b><span>Fewer roadside stops, longer stretches of sleep.</span></span></li>
+        <li><span class="dotn">04</span><span><b>Climate control</b><span>Fitted across the fleet — coast humidity and highland cold both covered.</span></span></li>
+        <li><span class="dotn">05</span><span><b>Parcels on the same network</b><span>Drop at a booking office, collect at the destination office the same day.</span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DESKS -->
+  <section class="pad" id="desks">
+    <div class="head">
+      <h2>Two booking desks, one network</h2>
+      <p>Reach the desk directly if you'd rather ask before booking — group travel, parcels, or a stop that isn't listed.</p>
+    </div>
+    <div class="desks">
+      <div class="desk">
+        <h3>Desk A — Coast &amp; Central</h3>
+        <div class="num">+254 103 761 442</div>
+        <p>Nairobi, the Mombasa Road corridor and every coastal and central town: Mombasa, Malindi, Kilifi, Mtwapa, Bamburi, Lamu, Voi, Watamu, Mpeketoni, Ukunda/Diani, Athi River/Mlolongo, Kibwezi, Mtito Andei, Kitui, Embu, Meru and Maua.</p>
+        <a class="btn btn-line btn-sm" target="_blank" rel="noopener" href="https://wa.me/254103761442?text=Hello%20Dreamline%20Booking%2C%20I%20have%20a%20question%20about%20a%20coast%20or%20central%20route.">Message Desk A</a>
+      </div>
+      <div class="desk">
+        <h3>Desk B — Rift Valley, Western &amp; Cross-border</h3>
+        <div class="num">+254 108 504 492</div>
+        <p>Nakuru, Eldoret, Kitale, Kisumu, Kericho, Kisii, Homa Bay, Kendu Bay, Busia, Bungoma, Malaba, Kakamega, Webuye and the cross-border service to Kampala, Uganda.</p>
+        <a class="btn btn-line btn-sm" target="_blank" rel="noopener" href="https://wa.me/254108504492?text=Hello%20Dreamline%20Booking%2C%20I%20have%20a%20question%20about%20a%20western%20or%20cross-border%20route.">Message Desk B</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="band-stone" id="faq">
+    <div class="pad">
+      <div class="head"><h2>Questions travellers ask us</h2></div>
+      <div class="faq">
+        <details open><summary>How do I book a seat?</summary><p>Search your route above, open the booking form on the matching row, fill in your details and send it to the desk on WhatsApp. The desk replies with the departure time and your seat numbers.</p></details>
+        <details><summary>How do I pay?</summary><p>Only through the system-generated M-Pesa prompt sent after your seat is confirmed. Dreamline never asks you to send money to a personal number.</p></details>
+        <details><summary>Can I send a parcel instead of travelling?</summary><p>Yes. Parcels move on the same coaches. Drop yours at any Dreamline booking office and it is collected at the destination office.</p></details>
+        <details><summary>Do you cross into Uganda?</summary><p>Yes — Nairobi, Kisumu and Mombasa all connect to Kampala. Carry a valid passport or East African ID for the border post.</p></details>
+        <details><summary>Can I change my travel date?</summary><p>Message the desk that confirmed your booking as early as you can. Changes depend on seat availability on the new date.</p></details>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer>
+    <div class="pad">
+      <div class="fgrid4">
+        <div>
+          <a class="logo" href="#top"><i></i>Dreamline Booking</a>
+          <p style="max-width:34ch;margin-top:14px;font-size:.9rem;">Online seat booking for Dreamline coaches across Kenya and into Uganda.</p>
+        </div>
+        <div>
+          <h4>Desks</h4>
+          <ul>
+            <li>Desk A: 0103 761 442</li>
+            <li>Desk B: 0108 504 492</li>
+            <li><a href="mailto:dreamline.exp@gmail.com">dreamline.exp@gmail.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Offices</h4>
+          <ul>
+            <li>Duruma Road, Nairobi</li>
+            <li>Sema Plaza, Mombasa Road (24/7)</li>
+            <li>Jomo Kenyatta Avenue, Mombasa</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Regions</h4>
+          <ul>
+            <li><a href="#routes">Coast</a></li>
+            <li><a href="#routes">Nairobi &amp; Central</a></li>
+            <li><a href="#routes">Rift Valley &amp; Western</a></li>
+            <li><a href="#routes">Cross-border to Kampala</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fbot">
+        <span>&copy; 2026 Dreamline Booking. Pay only via system-generated M-Pesa prompts.</span>
+        <span>dreamlinebooking.com</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- BOOKING SHEET -->
+<div class="scrim" id="scrim"></div>
+<aside class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Booking form">
+  <button class="close" id="sheetClose" type="button" aria-label="Close">&times;</button>
+  <h3>Request your seat</h3>
+  <div class="route" id="sRoute">Nairobi &rarr; Mombasa</div>
+
+  <div class="sfld"><label for="sName">Full name</label><input type="text" id="sName" placeholder="e.g. Jane Wanjiru"></div>
+  <div class="srow">
+    <div class="sfld"><label for="sPhone">Phone</label><input type="tel" id="sPhone" placeholder="07XX XXX XXX"></div>
+    <div class="sfld"><label for="sPax">Passengers</label><input type="number" id="sPax" min="1" max="12" value="1"></div>
+  </div>
+  <div class="srow">
+    <div class="sfld"><label for="sDate">Travel date</label><input type="date" id="sDate"></div>
+    <div class="sfld"><label for="sTime">Departure</label>
+      <select id="sTime">
+        <option>Morning (07:00–09:00)</option>
+        <option>Afternoon (12:00–14:00)</option>
+        <option>Evening (17:00–18:00)</option>
+        <option selected>Night (20:00–21:00)</option>
+      </select>
+    </div>
+  </div>
+  <div class="sfld"><label for="sClass">Class</label><select id="sClass"><option>Standard</option><option>VIP</option></select></div>
+  <div class="sfld"><label for="sSeat">Seat preference</label>
+    <select id="sSeat">
+      <option>No preference</option>
+      <option>Window</option>
+      <option>Aisle</option>
+      <option>Front of coach</option>
+      <option>Middle of coach</option>
+      <option>Rear of coach</option>
+    </select>
+  </div>
+  <div class="sfld"><label for="sNotes">Notes (optional)</label><textarea id="sNotes" rows="2" placeholder="Luggage, parcel, boarding point..."></textarea></div>
+
+  <div class="err" id="sErr">Please add your name, phone number and travel date.</div>
+  <div class="notice" id="sNotice"></div>
+  <button class="btn btn-clay btn-block" id="sSend" type="button">Send to the desk on WhatsApp</button>
+</aside>
+
+<script>
+(function(){
+  var DESK={a:{n:"254103761442",l:"Desk A — Coast & Central"},b:{n:"254108504492",l:"Desk B — Rift Valley, Western & Cross-border"}};
+  var ROUTES=[
+    {f:"Nairobi",t:"Mombasa",r:"coastal",d:"a"},{f:"Nairobi",t:"Malindi",r:"coastal",d:"a"},
+    {f:"Nairobi",t:"Kilifi",r:"coastal",d:"a"},{f:"Nairobi",t:"Mtwapa",r:"coastal",d:"a"},
+    {f:"Nairobi",t:"Bamburi",r:"coastal",d:"a"},{f:"Nairobi",t:"Lamu",r:"coastal",d:"a"},
+    {f:"Nairobi",t:"Voi",r:"coastal",d:"a"},{f:"Nairobi",t:"Watamu",r:"coastal",d:"a"},
+    {f:"Nairobi",t:"Mpeketoni",r:"coastal",d:"a"},{f:"Nairobi",t:"Ukunda / Diani",r:"coastal",d:"a"},
+    {f:"Mombasa",t:"Malindi",r:"coastal",d:"a"},
+    {f:"Nairobi",t:"Athi River / Mlolongo",r:"central",d:"a"},{f:"Nairobi",t:"Kibwezi",r:"central",d:"a"},
+    {f:"Nairobi",t:"Mtito Andei",r:"central",d:"a"},{f:"Nairobi",t:"Kitui",r:"central",d:"a"},
+    {f:"Nairobi",t:"Embu",r:"central",d:"a"},{f:"Nairobi",t:"Meru",r:"central",d:"a"},
+    {f:"Nairobi",t:"Maua",r:"central",d:"a"},
+    {f:"Nairobi",t:"Nakuru",r:"western",d:"b"},{f:"Nairobi",t:"Eldoret",r:"western",d:"b"},
+    {f:"Nairobi",t:"Kitale",r:"western",d:"b"},{f:"Nairobi",t:"Kisumu",r:"western",d:"b"},
+    {f:"Nairobi",t:"Kericho",r:"western",d:"b"},{f:"Nairobi",t:"Kisii",r:"western",d:"b"},
+    {f:"Nairobi",t:"Homa Bay",r:"western",d:"b"},{f:"Nairobi",t:"Kendu Bay",r:"western",d:"b"},
+    {f:"Nairobi",t:"Busia",r:"western",d:"b"},{f:"Nairobi",t:"Bungoma",r:"western",d:"b"},
+    {f:"Nairobi",t:"Malaba",r:"western",d:"b"},{f:"Nairobi",t:"Kakamega",r:"western",d:"b"},
+    {f:"Nairobi",t:"Webuye",r:"western",d:"b"},{f:"Mombasa",t:"Kisumu",r:"western",d:"b"},
+    {f:"Kampala (Uganda)",t:"Kisumu",r:"western",d:"b"},
+    {f:"Nairobi",t:"Kampala (Uganda)",r:"international",d:"b"},
+    {f:"Kampala (Uganda)",t:"Mombasa",r:"international",d:"b"}
+  ];
+  var LABEL={coastal:"Coast",central:"Nairobi & Central",western:"Rift Valley & Western",international:"Cross-border"};
+  var $=function(id){return document.getElementById(id);};
+  var current=null, filter="all", hit=null;
+
+  // populate selects
+  var towns={};
+  ROUTES.forEach(function(x){towns[x.f]=1;towns[x.t]=1;});
+  var list=Object.keys(towns).sort();
+  function fill(sel,dflt){
+    sel.innerHTML="";
+    list.forEach(function(t){
+      var o=document.createElement("option");o.value=t;o.textContent=t;
+      if(t===dflt)o.selected=true;sel.appendChild(o);
+    });
+  }
+  fill($("fFrom"),"Nairobi"); fill($("fTo"),"Mombasa");
+
+  var today=new Date().toISOString().slice(0,10);
+  $("fDate").value=today; $("fDate").min=today; $("sDate").min=today;
+
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+  function render(){
+    var host=$("rows"); host.innerHTML="";
+    var shown=0;
+    ROUTES.forEach(function(x,i){
+      if(filter!=="all" && x.r!==filter) return;
+      shown++;
+      var row=document.createElement("div");
+      row.className="trow"+(hit===i?" hit":"");
+      row.innerHTML='<div class="tpath">'+esc(x.f)+'<s>&rarr;</s>'+esc(x.t)+'</div>'+
+        '<div class="tmeta">Daily &middot; Standard &amp; VIP &middot; '+LABEL[x.r]+'</div>'+
+        '<div><span class="pill '+x.d+'">'+(x.d==="a"?"Desk A":"Desk B")+'</span></div>'+
+        '<div><button class="btn btn-dark btn-sm" type="button" data-i="'+i+'">Book</button></div>';
+      host.appendChild(row);
+    });
+    $("empty").style.display=shown?"none":"block";
+  }
+  render();
+
+  $("rows").addEventListener("click",function(e){
+    var b=e.target.closest("button[data-i]"); if(!b) return;
+    open(ROUTES[+b.getAttribute("data-i")]);
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll(".tab"),function(t){
+    t.addEventListener("click",function(){
+      document.querySelectorAll(".tab").forEach(function(o){o.classList.remove("on");});
+      t.classList.add("on"); filter=t.getAttribute("data-region"); hit=null; render();
+    });
+  });
+
+  $("fGo").addEventListener("click",function(){
+    var f=$("fFrom").value,t=$("fTo").value,msg=$("fMsg");
+    if(f===t){msg.textContent="Choose two different towns.";msg.classList.add("show");return;}
+    var idx=-1;
+    ROUTES.forEach(function(x,i){if(x.f===f&&x.t===t)idx=i;});
+    if(idx<0){ROUTES.forEach(function(x,i){if(idx<0&&x.f===t&&x.t===f)idx=i;});}
+    if(idx<0){
+      msg.textContent="We don't run "+f+" to "+t+" directly. Message a desk and we'll advise the nearest connection.";
+      msg.classList.add("show"); return;
+    }
+    msg.classList.remove("show");
+    filter="all"; hit=idx;
+    document.querySelectorAll(".tab").forEach(function(o){o.classList.toggle("on",o.getAttribute("data-region")==="all");});
+    render();
+    document.getElementById("routes").scrollIntoView({behavior:"smooth"});
+    setTimeout(function(){open(ROUTES[idx]);},550);
+  });
+
+  function open(r){
+    current=r;
+    $("sRoute").innerHTML=esc(r.f)+" &rarr; "+esc(r.t);
+    $("sNotice").textContent="This corridor is handled by "+DESK[r.d].l+" ("+DESK[r.d].n.replace("254","0")+"). Payment is by M-Pesa prompt only, after confirmation.";
+    if(!$("sDate").value)$("sDate").value=$("fDate").value||today;
+    $("sClass").value=$("fClass").value;
+    $("scrim").classList.add("show"); $("sheet").classList.add("show");
+    document.body.style.overflow="hidden";
+  }
+  function close(){
+    $("scrim").classList.remove("show"); $("sheet").classList.remove("show");
+    document.body.style.overflow="";
+  }
+  $("scrim").addEventListener("click",close);
+  $("sheetClose").addEventListener("click",close);
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")close();});
+
+  $("sSend").addEventListener("click",function(){
+    if(!current)return;
+    var n=$("sName").value.trim(),p=$("sPhone").value.trim(),d=$("sDate").value;
+    if(!n||!p||!d){$("sErr").classList.add("show");return;}
+    $("sErr").classList.remove("show");
+    var txt="Hello Dreamline Booking, I would like to book a seat.\n"+
+      "Route: "+current.f+" to "+current.t+"\n"+
+      "Date: "+d+"\n"+
+      "Departure: "+$("sTime").value+"\n"+
+      "Class: "+$("sClass").value+"\n"+
+      "Passengers: "+$("sPax").value+"\n"+
+      "Seat preference: "+$("sSeat").value+"\n"+
+      "Name: "+n+"\n"+
+      "Phone: "+p+
+      ($("sNotes").value.trim()?"\nNotes: "+$("sNotes").value.trim():"");
+    window.open("https://wa.me/"+DESK[current.d].n+"?text="+encodeURIComponent(txt),"_blank");
+  });
+
+  // rail highlight
+  var links=document.querySelectorAll(".rail nav a");
+  window.addEventListener("scroll",function(){
+    var y=window.scrollY+140,cur="find";
+    document.querySelectorAll("main section").forEach(function(s){if(s.offsetTop<=y)cur=s.id;});
+    links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+cur);});
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
