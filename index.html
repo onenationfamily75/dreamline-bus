@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dreamline Booking | Bus Tickets Nairobi, Mombasa, Kisumu &amp; Kampala</title>
-<meta name="description" content="Book Dreamline bus seats online across Kenya and to Kampala. Compare 40+ routes, choose Standard or VIP, and confirm your seat on WhatsApp in minutes.">
+<meta name="description" content="Book Dreamline bus seats online across Kenya and to Kampala. Compare 40+ routes with fares from KSh 600, choose Standard or VIP, and confirm your seat on WhatsApp in minutes.">
 <link rel="canonical" href="https://dreamlinebooking.com/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0E3B2E">
@@ -12,10 +12,10 @@
 <meta property="og:site_name" content="Dreamline Booking">
 <meta property="og:url" content="https://dreamlinebooking.com/">
 <meta property="og:title" content="Dreamline Booking | Bus Tickets Across Kenya &amp; to Kampala">
-<meta property="og:description" content="Search a route, pick Standard or VIP, and confirm your seat on WhatsApp. Coast, Central, Rift Valley, Western and cross-border departures daily.">
+<meta property="og:description" content="Search a route, see the fare, pick Standard or VIP, and confirm your seat on WhatsApp. Coast, Central, Rift Valley, Western and cross-border departures daily.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Dreamline Booking | Bus Tickets Across Kenya &amp; to Kampala">
-<meta name="twitter:description" content="Search a route, pick Standard or VIP, and confirm your seat on WhatsApp.">
+<meta name="twitter:description" content="Search a route, see the fare, pick Standard or VIP, and confirm your seat on WhatsApp.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -46,6 +46,7 @@
       "@type": "FAQPage",
       "mainEntity": [
         {"@type": "Question", "name": "How do I book a Dreamline bus seat?", "acceptedAnswer": {"@type": "Answer", "text": "Search your route on dreamlinebooking.com, open the booking form, choose your date, class and seats, then send the request to the booking desk on WhatsApp for confirmation."}},
+        {"@type": "Question", "name": "How much does a Dreamline ticket cost?", "acceptedAnswer": {"@type": "Answer", "text": "Indicative Standard fares start from about KSh 600 (Mombasa to Malindi) and KSh 900 (Nairobi to Nakuru). Nairobi to Mombasa is from KSh 1,800 Standard and KSh 2,200 VIP, Nairobi to Kisumu from KSh 1,800, and Nairobi to Kampala from KSh 1,800. Fares rise on weekends, holidays and school-term days, and the desk confirms the final fare."}},
         {"@type": "Question", "name": "How do I pay for my ticket?", "acceptedAnswer": {"@type": "Answer", "text": "Payment is made only through a system-generated M-Pesa prompt after the desk confirms your seat. Never send money to a personal number."}},
         {"@type": "Question", "name": "Which routes cross the border?", "acceptedAnswer": {"@type": "Answer", "text": "Dreamline runs cross-border coaches between Nairobi, Kisumu, Mombasa and Kampala in Uganda, handled by the Western desk."}}
       ]
@@ -90,7 +91,7 @@
 
   /* ---------- Topbar ---------- */
   .topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.93);backdrop-filter:blur(9px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(20px,5vw,72px);}
-  .topbar .tick{font-size:.82rem;color:var(--mute);}
+  .topbar .tick{font-size:.82rem;color:var(--mute);margin:0;}
   .topbar .tick b{color:var(--forest);}
   .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:11px 20px;font-weight:700;font-size:.9rem;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:.16s ease;}
   .btn-clay{background:var(--clay);color:#fff;}
@@ -110,6 +111,7 @@
   .hero p.lede{font-size:1.08rem;color:var(--mute);max-width:46ch;margin:18px 0 26px;}
   .facts{display:flex;flex-wrap:wrap;gap:10px;}
   .fact{background:var(--stone);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:.84rem;font-weight:600;color:var(--forest);}
+  .fact.hot{background:#FFF6E8;border-color:#F1D9A8;}
 
   .finder{background:var(--forest);border-radius:18px;padding:26px;color:#EAF1ED;box-shadow:0 24px 50px -28px rgba(14,59,46,.7);}
   .finder h2{color:#fff;font-size:1.2rem;}
@@ -123,27 +125,50 @@
   .fnote{font-size:.78rem;color:rgba(234,241,237,.6);margin-top:12px;}
   .fmsg{display:none;margin-top:12px;background:rgba(240,180,41,.16);border:1px solid rgba(240,180,41,.4);color:#FBE8BC;border-radius:9px;padding:10px 12px;font-size:.85rem;}
   .fmsg.show{display:block;}
+  .fprice{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:11px 14px;font-size:.88rem;color:rgba(234,241,237,.85);}
+  .fprice b{color:var(--sun);font-family:'Bricolage Grotesque',sans-serif;font-size:1.05rem;}
+  .fprice small{display:block;font-size:.74rem;color:rgba(234,241,237,.6);margin-top:2px;}
 
   /* ---------- Route directory: table, not cards ---------- */
   .band-stone{background:var(--stone);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .head{max-width:62ch;margin-bottom:30px;}
   .head h2{font-size:clamp(1.7rem,2.8vw,2.3rem);letter-spacing:-0.02em;}
   .head p{color:var(--mute);margin:12px 0 0;}
+  .head p.small{font-size:.85rem;}
   .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
   .tab{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font-size:.86rem;font-weight:700;color:var(--mute);cursor:pointer;}
   .tab.on{background:var(--forest);color:#fff;border-color:var(--forest);}
   .table{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;}
-  .trow{display:grid;grid-template-columns:1.4fr 1fr .8fr auto;gap:16px;align-items:center;padding:15px 20px;border-bottom:1px solid var(--line);}
+  .trow{display:grid;grid-template-columns:1.4fr 1fr 1fr .7fr auto;gap:16px;align-items:center;padding:15px 20px;border-bottom:1px solid var(--line);}
   .trow:last-child{border-bottom:none;}
   .trow.hd{background:#FBFAF7;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--mute);}
   .trow.hit{background:#FFF6E8;}
   .tpath{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;color:var(--forest);font-size:1.02rem;}
   .tpath s{text-decoration:none;color:var(--clay);margin:0 7px;}
   .tmeta{font-size:.85rem;color:var(--mute);}
+  .price{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;color:var(--forest);font-size:.98rem;line-height:1.3;}
+  .price small{display:block;font-weight:400;font-size:.76rem;color:var(--mute);font-family:'Source Sans 3',sans-serif;}
+  .price.ask{color:var(--mute);font-size:.9rem;}
   .pill{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:700;border-radius:999px;padding:4px 11px;border:1px solid var(--line);}
   .pill.a{color:#0E3B2E;background:#E4EFE9;border-color:#C7DFD4;}
   .pill.b{color:#8A3A16;background:#FBEADF;border-color:#F1CDB6;}
   .empty{display:none;padding:22px;text-align:center;color:var(--mute);font-size:.9rem;}
+
+  /* ---------- Hero photo background ---------- */
+  .hero{position:relative;isolation:isolate;padding-bottom:70px;}
+  .herobg{position:absolute;inset:0;z-index:-1;background:var(--forest-deep);}
+  .herobg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;}
+  .herobg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,38,29,.93) 0%,rgba(8,38,29,.78) 48%,rgba(8,38,29,.45) 100%);}
+  .hero h1{color:#fff;}
+  .hero h1 em{color:var(--clay-soft);}
+  .hero p.lede{color:rgba(255,255,255,.86);}
+  .hero .kicker{color:var(--sun);}
+  .hero .fact{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.26);color:#fff;}
+  .hero .fact.hot{background:var(--sun);border-color:var(--sun);color:#08261D;}
+  .hero .finder{border:1px solid rgba(255,255,255,.18);}
+
+  /* ---------- Route rows with photo backgrounds ---------- */
+  .trow.pic{background-size:cover;background-position:center;background-repeat:no-repeat;}
 
   /* ---------- Numbered promise strip ---------- */
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
@@ -153,7 +178,7 @@
   .step p{margin:0;color:var(--mute);font-size:.94rem;}
 
   /* ---------- Fleet gallery ---------- */
-  .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;grid-auto-flow:dense;}
   .fcard{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--stone);aspect-ratio:4/3;}
   .fcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease;}
   .fcard:hover img{transform:scale(1.06);}
@@ -199,6 +224,7 @@
   .desk h3{font-size:1.05rem;}
   .desk .num{font-family:'Bricolage Grotesque',sans-serif;font-size:1.4rem;color:var(--clay);margin:10px 0 6px;}
   .desk p{color:var(--mute);font-size:.9rem;margin:0 0 16px;}
+  .desk p.fromfare{background:var(--stone);border-radius:8px;padding:9px 12px;font-size:.84rem;color:var(--forest);font-weight:600;}
 
   /* ---------- FAQ ---------- */
   .faq details{border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px;background:#fff;}
@@ -230,6 +256,8 @@
   .notice{background:var(--stone);border-left:3px solid var(--sun);border-radius:0 8px 8px 0;padding:12px 14px;font-size:.83rem;color:var(--mute);margin:16px 0;}
   .err{color:#B3261E;font-size:.83rem;display:none;margin-bottom:10px;}
   .err.show{display:block;}
+  .fare{background:#FFF6E8;border:1px solid #F1D9A8;border-left:3px solid var(--clay);border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:.88rem;color:var(--mute);}
+  .fare b{color:var(--clay);font-family:'Bricolage Grotesque',sans-serif;font-size:1rem;}
 
   @media (max-width:1080px){
     .hero{grid-template-columns:1fr;gap:36px;}
@@ -256,7 +284,7 @@
     <a class="logo" href="#top"><i></i>Dreamline Booking</a>
     <nav>
       <a href="#find" class="on">Find a seat <span>01</span></a>
-      <a href="#routes">Route directory <span>02</span></a>
+      <a href="#routes">Routes &amp; fares <span>02</span></a>
       <a href="#fleet">Our fleet <span>03</span></a>
       <a href="#how">How booking works <span>04</span></a>
       <a href="#comfort">Onboard <span>05</span></a>
@@ -275,18 +303,20 @@
 <div class="shell">
 
   <div class="topbar">
-    <p class="tick">Daily departures &middot; <b>40+ routes</b> across Kenya and into Uganda</p>
+    <p class="tick">Daily departures &middot; <b>40+ routes</b> &middot; fares from <b>KSh 600</b></p>
     <a class="btn btn-clay btn-sm" href="#find">Book a seat</a>
   </div>
 
   <main>
   <!-- HERO -->
   <section class="pad hero" id="find">
+    <div class="herobg"><img src="images/fleet-10.webp" alt="" loading="eager"></div>
     <div>
       <span class="kicker">Kenya &amp; Uganda coach booking</span>
       <h1>Pick the town.<br>We'll hold the <em>seat</em>.</h1>
-      <p class="lede">Dreamline Booking is the online seat desk for Dreamline coaches — coast, central, Rift Valley, western Kenya and cross-border runs to Kampala. Choose a route, send your details, and a desk agent confirms on WhatsApp.</p>
+      <p class="lede">Dreamline Booking is the online seat desk for Dreamline coaches — coast, central, Rift Valley, western Kenya and cross-border runs to Kampala. Choose a route, see the fare, send your details, and a desk agent confirms on WhatsApp.</p>
       <div class="facts">
+        <span class="fact hot">Fares from KSh 600</span>
         <span class="fact">31 towns served</span>
         <span class="fact">Standard &amp; VIP classes</span>
         <span class="fact">Overnight &amp; daytime runs</span>
@@ -296,7 +326,7 @@
 
     <div class="finder">
       <h2>Search a departure</h2>
-      <p class="sub">Pick your towns and date — we'll open the booking form for that exact route.</p>
+      <p class="sub">Pick your towns and date — we'll show the fare and open the booking form for that exact route.</p>
       <div class="fgrid">
         <div class="fld">
           <label for="fFrom">Leaving from</label>
@@ -315,10 +345,13 @@
           <select id="fClass"><option>Standard</option><option>VIP</option></select>
         </div>
         <div class="fld full">
+          <div class="fprice" id="fPrice"></div>
+        </div>
+        <div class="fld full">
           <button class="btn btn-clay btn-block" id="fGo" type="button">Show this route</button>
         </div>
       </div>
-      <p class="fnote">No account, no card details. Seats are held once the desk replies.</p>
+      <p class="fnote">No account, no card details. Seats are held once the desk replies. Fares are indicative and confirmed by the desk.</p>
       <div class="fmsg" id="fMsg"></div>
     </div>
   </section>
@@ -327,8 +360,9 @@
   <section class="band-stone" id="routes">
     <div class="pad">
       <div class="head">
-        <h2>Route directory</h2>
-        <p>Every corridor Dreamline runs, listed as a timetable rather than a gallery. Filter by region, then open the booking form on the row you need.</p>
+        <h2>Routes &amp; fares</h2>
+        <p>Every corridor Dreamline runs, listed as a timetable with indicative per-seat fares. Filter by region, then open the booking form on the row you need.</p>
+        <p class="small">Fares are "from" prices per seat in Kenya shillings (KSh) and are based on published fare guides. Weekends, public holidays and school opening and closing days cost more, and the desk confirms the final fare. Routes marked "Ask desk" are priced on request.</p>
       </div>
       <div class="tabs" id="tabs">
         <button class="tab on" data-region="all" type="button">All routes</button>
@@ -338,7 +372,7 @@
         <button class="tab" data-region="international" type="button">Cross-border</button>
       </div>
       <div class="table">
-        <div class="trow hd"><div>Route</div><div>Service</div><div>Desk</div><div></div></div>
+        <div class="trow hd"><div>Route</div><div>Service</div><div>Fare (KSh)</div><div>Desk</div><div></div></div>
         <div id="rows"></div>
         <div class="empty" id="empty">No route matches that pair yet — message a desk and we'll advise the nearest connection.</div>
       </div>
@@ -361,6 +395,11 @@
       <div class="fcard"><img src="images/fleet-07.jpg" alt="Two Dreamline coaches parked side by side at dusk" loading="lazy"><span class="ftag">Fleet yard</span></div>
       <div class="fcard"><img src="images/fleet-08.jpg" alt="Dream Xenon coach, black livery, daytime" loading="lazy"><span class="ftag">Dream Xenon</span></div>
       <div class="fcard"><img src="images/fleet-09.jpg" alt="Dreamline coach front close-up, dusk livery" loading="lazy"><span class="ftag">Front detail</span></div>
+      <div class="fcard tall"><img src="images/fleet-10.webp" alt="Dreamline Master coach in maroon and cream livery, front three-quarter view" loading="lazy"><span class="ftag">Dreamline Master</span></div>
+      <div class="fcard tall"><img src="images/fleet-11.webp" alt="Dark Dream coach inside the depot, front three-quarter view" loading="lazy"><span class="ftag">In the depot</span></div>
+      <div class="fcard"><img src="images/fleet-12.webp" alt="Dream coach with blue graphic livery on the road under a cloudy sky" loading="lazy"><span class="ftag">Dream night run</span></div>
+      <div class="fcard"><img src="images/fleet-13.webp" alt="Dream Express coach in dark livery parked in daylight" loading="lazy"><span class="ftag">Dream Express</span></div>
+      <div class="fcard"><img src="images/fleet-14.webp" alt="Two Dreamline coaches, one red and one black, meeting on the road" loading="lazy"><span class="ftag">On the road</span></div>
     </div>
   </section>
 
@@ -374,17 +413,17 @@
       <div class="step">
         <div class="n">01</div>
         <h3>Search your corridor</h3>
-        <p>Choose the towns and the date. The directory highlights the matching row and names the desk that handles it.</p>
+        <p>Choose the towns and the date. The directory highlights the matching row, shows the fare and names the desk that handles it.</p>
       </div>
       <div class="step">
         <div class="n">02</div>
         <h3>Send your details</h3>
-        <p>Name, phone, passengers, class and any luggage notes. Everything travels with the request, so nothing gets asked twice.</p>
+        <p>Name, phone, seats, class and any luggage notes. The fare and your seat numbers travel with the request, so nothing gets asked twice.</p>
       </div>
       <div class="step">
         <div class="n">03</div>
         <h3>Confirm and pay</h3>
-        <p>The desk replies on WhatsApp with the departure time and seat numbers. Pay only via the system-generated M-Pesa prompt.</p>
+        <p>The desk replies on WhatsApp with the departure time, seat numbers and final fare. Pay only via the system-generated M-Pesa prompt.</p>
       </div>
     </div>
   </section>
@@ -397,7 +436,7 @@
           <h2>What the long night ride actually gives you</h2>
           <p>Most of our corridors are six to twelve hours. The coaches are fitted for that, not for a short hop.</p>
         </div>
-        <a class="btn btn-dark" href="#routes">Browse the directory</a>
+        <a class="btn btn-dark" href="#routes">See routes &amp; fares</a>
       </div>
       <ul class="clist">
         <li><span class="dotn">01</span><span><b>Reclining VIP rows</b><span>Extra legroom and deeper recline on the coast, western and Kampala runs.</span></span></li>
@@ -413,19 +452,21 @@
   <section class="pad" id="desks">
     <div class="head">
       <h2>Two booking desks, one network</h2>
-      <p>Reach the desk directly if you'd rather ask before booking — group travel, parcels, or a stop that isn't listed.</p>
+      <p>Reach the desk directly if you'd rather ask before booking — group travel, parcels, a fare on a route marked "Ask desk", or a stop that isn't listed.</p>
     </div>
     <div class="desks">
       <div class="desk">
         <h3>Desk A — Coast &amp; Central</h3>
         <div class="num">+254 103 761 442</div>
         <p>Nairobi, the Mombasa Road corridor and every coastal and central town: Mombasa, Malindi, Kilifi, Mtwapa, Bamburi, Lamu, Voi, Watamu, Mpeketoni, Ukunda/Diani, Athi River/Mlolongo, Kibwezi, Mtito Andei, Kitui, Embu, Meru and Maua.</p>
+        <p class="fromfare">Example fares: Nairobi &rarr; Mombasa from KSh 1,800 &middot; Nairobi &rarr; Malindi from KSh 2,200 &middot; Mombasa &rarr; Malindi from KSh 600</p>
         <a class="btn btn-line btn-sm" target="_blank" rel="noopener" href="https://wa.me/254103761442?text=Hello%20Dreamline%20Booking%2C%20I%20have%20a%20question%20about%20a%20coast%20or%20central%20route.">Message Desk A</a>
       </div>
       <div class="desk">
         <h3>Desk B — Rift Valley, Western &amp; Cross-border</h3>
         <div class="num">+254 108 504 492</div>
         <p>Nakuru, Eldoret, Kitale, Kisumu, Kericho, Kisii, Homa Bay, Kendu Bay, Busia, Bungoma, Malaba, Kakamega, Webuye and the cross-border service to Kampala, Uganda.</p>
+        <p class="fromfare">Example fares: Nairobi &rarr; Nakuru from KSh 900 &middot; Nairobi &rarr; Kisumu from KSh 1,800 &middot; Nairobi &rarr; Kampala from KSh 1,800</p>
         <a class="btn btn-line btn-sm" target="_blank" rel="noopener" href="https://wa.me/254108504492?text=Hello%20Dreamline%20Booking%2C%20I%20have%20a%20question%20about%20a%20western%20or%20cross-border%20route.">Message Desk B</a>
       </div>
     </div>
@@ -436,11 +477,12 @@
     <div class="pad">
       <div class="head"><h2>Questions travellers ask us</h2></div>
       <div class="faq">
-        <details open><summary>How do I book a seat?</summary><p>Search your route above, open the booking form on the matching row, fill in your details and send it to the desk on WhatsApp. The desk replies with the departure time and your seat numbers.</p></details>
+        <details open><summary>How do I book a seat?</summary><p>Search your route above, open the booking form on the matching row, fill in your details and send it to the desk on WhatsApp. The desk replies with the departure time, your seat numbers and the final fare.</p></details>
+        <details><summary>How much does a ticket cost?</summary><p>Indicative Standard fares start from about KSh 600 (Mombasa to Malindi) and KSh 900 (Nairobi to Nakuru). Nairobi to Mombasa is from KSh 1,800 Standard and KSh 2,200 VIP, Nairobi to Kisumu from KSh 1,800, and Nairobi to Kampala from KSh 1,800. See the full list under Routes &amp; fares. Prices rise on weekends, public holidays and school-term days, so the desk confirms the final fare before you pay.</p></details>
         <details><summary>How do I pay?</summary><p>Only through the system-generated M-Pesa prompt sent after your seat is confirmed. Dreamline never asks you to send money to a personal number.</p></details>
         <details><summary>Can I send a parcel instead of travelling?</summary><p>Yes. Parcels move on the same coaches. Drop yours at any Dreamline booking office and it is collected at the destination office.</p></details>
-        <details><summary>Do you cross into Uganda?</summary><p>Yes — Nairobi, Kisumu and Mombasa all connect to Kampala. Carry a valid passport or East African ID for the border post.</p></details>
-        <details><summary>Can I change my travel date?</summary><p>Message the desk that confirmed your booking as early as you can. Changes depend on seat availability on the new date.</p></details>
+        <details><summary>Do you cross into Uganda?</summary><p>Yes — Nairobi, Kisumu and Mombasa all connect to Kampala; Nairobi to Kampala is from KSh 1,800 Standard. Carry a valid passport or East African ID for the border post.</p></details>
+        <details><summary>Can I change my travel date?</summary><p>Message the desk that confirmed your booking as early as you can. Changes depend on seat availability on the new date, and the fare can differ if the new date is a peak day.</p></details>
       </div>
     </div>
   </section>
@@ -451,7 +493,7 @@
       <div class="fgrid4">
         <div>
           <a class="logo" href="#top"><i></i>Dreamline Booking</a>
-          <p style="max-width:34ch;margin-top:14px;font-size:.9rem;">Online seat booking for Dreamline coaches across Kenya and into Uganda.</p>
+          <p style="max-width:34ch;margin-top:14px;font-size:.9rem;">Online seat booking for Dreamline coaches across Kenya and into Uganda. Fares from KSh 600.</p>
         </div>
         <div>
           <h4>Desks</h4>
@@ -470,7 +512,7 @@
           </ul>
         </div>
         <div>
-          <h4>Regions</h4>
+          <h4>Regions &amp; fares</h4>
           <ul>
             <li><a href="#routes">Coast</a></li>
             <li><a href="#routes">Nairobi &amp; Central</a></li>
@@ -480,7 +522,7 @@
         </div>
       </div>
       <div class="fbot">
-        <span>&copy; 2026 Dreamline Booking. Pay only via system-generated M-Pesa prompts.</span>
+        <span>&copy; 2026 Dreamline Booking. Fares are indicative and confirmed by the desk. Pay only via system-generated M-Pesa prompts.</span>
         <span>dreamlinebooking.com</span>
       </div>
     </div>
@@ -511,6 +553,8 @@
     </div>
   </div>
   <div class="sfld"><label for="sClass">Class</label><select id="sClass"><option>Standard</option><option>VIP</option></select></div>
+
+  <div class="fare" id="sFare"></div>
 
   <div class="seatbox">
     <h4>Choose your seat(s)</h4>
@@ -563,6 +607,40 @@
   var $=function(id){return document.getElementById(id);};
   var current=null, filter="all", hit=null;
 
+  // ---------- Fares (KSh per seat, indicative "from" prices) ----------
+  // Format: "From|To": [Standard, VIP]. Use null where the desk quotes on request.
+  // Routes not listed here show "Ask desk". Edit this list to update every price on the site
+  // (route table, search box, booking form and the WhatsApp message).
+  // Source: published Dreamline fare guides (2024-2026); same price is used in both directions.
+  var PRICES={
+    "Nairobi|Mombasa":[1800,2200],
+    "Nairobi|Malindi":[2200,3000],
+    "Nairobi|Kilifi":[1900,2600],
+    "Nairobi|Mtwapa":[1800,2600],
+    "Nairobi|Bamburi":[1800,2600],
+    "Nairobi|Lamu":[2300,null],
+    "Nairobi|Voi":[1800,2600],
+    "Nairobi|Watamu":[2200,3000],
+    "Mombasa|Malindi":[600,null],
+    "Nairobi|Nakuru":[900,null],
+    "Nairobi|Eldoret":[1800,2400],
+    "Nairobi|Kisumu":[1800,2400],
+    "Nairobi|Kisii":[1600,null],
+    "Nairobi|Homa Bay":[1600,null],
+    "Nairobi|Kendu Bay":[1600,null],
+    "Nairobi|Busia":[2100,2500],
+    "Nairobi|Bungoma":[1800,2400],
+    "Nairobi|Malaba":[1800,2400],
+    "Mombasa|Kisumu":[2800,3100],
+    "Nairobi|Kampala (Uganda)":[1800,2300]
+  };
+  function priceFor(f,t){return PRICES[f+"|"+t]||PRICES[t+"|"+f]||null;}
+  function money(n){return n?"KSh "+n.toLocaleString("en-KE"):null;}
+  function unitFor(f,t,cls){
+    var p=priceFor(f,t); if(!p) return null;
+    return cls==="VIP"?p[1]:p[0];
+  }
+
   // ---------- Seat map (T-X 56-seat layout) ----------
   // Row layout mirrors the printed seat chart: 2+2 seating with a centre aisle,
   // narrowing to a single pair for the last two rows.
@@ -607,6 +685,22 @@
     var taken=TAKEN.indexOf(n)>-1;
     return '<button type="button" class="seat'+(taken?" taken":"")+'" data-seat="'+n+'"'+(taken?" disabled":"")+'>'+n+'</button>';
   }
+
+  // ---------- Fare box inside the booking sheet ----------
+  function updateFare(){
+    var el=$("sFare"); if(!el) return;
+    if(!current){el.style.display="none";return;}
+    el.style.display="";
+    var cls=$("sClass").value;
+    var u=unitFor(current.f,current.t,cls);
+    var n=Math.max(1,selectedSeats.length);
+    if(u){
+      el.innerHTML="Indicative "+cls+" fare: <b>"+money(u)+"</b> per seat &middot; "+n+" seat"+(n>1?"s":"")+" = <b>"+money(u*n)+"</b>. The desk confirms the final fare before you pay.";
+    } else {
+      el.textContent="The "+cls+" fare for this route is quoted by the desk on WhatsApp.";
+    }
+  }
+
   function refreshSeatUI(){
     Array.prototype.forEach.call(document.querySelectorAll(".seat[data-seat]"),function(b){
       var n=+b.getAttribute("data-seat");
@@ -620,6 +714,7 @@
       p.textContent="No seats selected yet";
     }
     $("sPax").value=Math.max(1,selectedSeats.length);
+    updateFare();
   }
   buildSeatMap();
   $("seatMap").addEventListener("click",function(e){
@@ -634,6 +729,7 @@
     refreshSeatUI();
   });
   refreshSeatUI();
+  $("sClass").addEventListener("change",updateFare);
 
   // populate selects
   var towns={};
@@ -653,16 +749,47 @@
 
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 
+  // ---------- Fare preview in the search box ----------
+  function updateFinderFare(){
+    var f=$("fFrom").value,t=$("fTo").value,cls=$("fClass").value,el=$("fPrice");
+    if(f===t){el.innerHTML="Choose two different towns to see the fare.";return;}
+    var p=priceFor(f,t);
+    var runs=false;
+    ROUTES.forEach(function(x){if((x.f===f&&x.t===t)||(x.f===t&&x.t===f))runs=true;});
+    if(!runs){el.innerHTML="No direct service on this pair — message a desk for the nearest connection.";return;}
+    var u=unitFor(f,t,cls);
+    if(u){
+      el.innerHTML="Indicative "+cls+" fare: <b>"+money(u)+"</b> per seat"+
+        (p&&p[0]&&p[1]?"<small>Standard "+money(p[0])+" &middot; VIP "+money(p[1])+"</small>":"<small>Final fare confirmed by the desk</small>");
+    } else {
+      el.innerHTML="Fare on request<small>The desk quotes the "+cls+" fare on WhatsApp.</small>";
+    }
+  }
+  ["fFrom","fTo","fClass"].forEach(function(id){$(id).addEventListener("change",updateFinderFare);});
+  updateFinderFare();
+
+  var POOL={coastal:["fleet-10","fleet-11","fleet-13"],central:["fleet-13","fleet-11"],western:["fleet-12","fleet-14","fleet-11"],international:["fleet-14","fleet-12"]};
+  function bg(x,i,isHit){
+    var a=POOL[x.r]||POOL.coastal, rgb=isHit?"255,246,232":"255,255,255";
+    return "linear-gradient(90deg,rgba("+rgb+",.97) 0%,rgba("+rgb+",.9) 52%,rgba("+rgb+",.5) 100%),url(images/"+a[i%a.length]+".webp)";
+  }
+
   function render(){
     var host=$("rows"); host.innerHTML="";
     var shown=0;
     ROUTES.forEach(function(x,i){
       if(filter!=="all" && x.r!==filter) return;
       shown++;
+      var p=priceFor(x.f,x.t);
+      var priceCell=p
+        ? '<div class="price">'+money(p[0])+'<small>'+(p[1]?'VIP '+money(p[1]):'VIP on request')+'</small></div>'
+        : '<div class="price ask">Ask desk<small>Quoted on WhatsApp</small></div>';
       var row=document.createElement("div");
-      row.className="trow"+(hit===i?" hit":"");
+      row.className="trow pic"+(hit===i?" hit":"");
+      row.style.backgroundImage=bg(x,i,hit===i);
       row.innerHTML='<div class="tpath">'+esc(x.f)+'<s>&rarr;</s>'+esc(x.t)+'</div>'+
         '<div class="tmeta">Daily &middot; Standard &amp; VIP &middot; '+LABEL[x.r]+'</div>'+
+        priceCell+
         '<div><span class="pill '+x.d+'">'+(x.d==="a"?"Desk A":"Desk B")+'</span></div>'+
         '<div><button class="btn btn-dark btn-sm" type="button" data-i="'+i+'">Book</button></div>';
       host.appendChild(row);
@@ -730,13 +857,19 @@
     }
     $("sErr").classList.remove("show");
     var seatList=selectedSeats.slice().sort(function(a,b){return a-b;}).join(", ");
+    var cls=$("sClass").value;
+    var u=unitFor(current.f,current.t,cls);
+    var fareLine=u
+      ? "Fare: "+money(u)+" per seat x "+selectedSeats.length+" = "+money(u*selectedSeats.length)+" (indicative, please confirm final fare)\n"
+      : "Fare: please quote the "+cls+" fare\n";
     var txt="Hello Dreamline Booking, I would like to book a seat.\n"+
       "Route: "+current.f+" to "+current.t+"\n"+
       "Date: "+d+"\n"+
       "Departure: "+$("sTime").value+"\n"+
-      "Class: "+$("sClass").value+"\n"+
+      "Class: "+cls+"\n"+
       "Passengers: "+$("sPax").value+"\n"+
       "Seat number(s): "+seatList+"\n"+
+      fareLine+
       "Name: "+n+"\n"+
       "Phone: "+p+
       ($("sNotes").value.trim()?"\nNotes: "+$("sNotes").value.trim():"");
